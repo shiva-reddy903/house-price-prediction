@@ -1,0 +1,21 @@
+## HOUSE PRICE PREDICTION
+This project predicts house prices using Regression
+
+## TECHNOLOGIES USED
+-Python
+-Pandas
+-Matplotlib
+-Scikit-learn
+
+## MECHINE LEARNING CONCEPTS USED
+-Linear Regression
+-Data preprocessing
+-Missing values handling
+-Feature scaling
+-Train-test split
+-Prediction on new data
+-Regression plotting,scattering
+-R2-score
+
+## OUTPUT
+Predicts house price based on area
