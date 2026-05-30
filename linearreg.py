@@ -2,9 +2,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt 
 import sklearn
+import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-
+import joblib
 
 data = {
     "Area" : [1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200],
@@ -25,10 +26,15 @@ x_train,x_test,y_train,y_test = train_test_split(
 #scaling
 scaler = StandardScaler()
 x_train_scaled = scaler.fit_transform(x_train)
-x_test_scaled = scaler.fit_transform(x_test)
+x_test_scaled = scaler.transform(x_test)
+
+
 from sklearn.linear_model import LinearRegression
 model = LinearRegression()
 model.fit(x_train_scaled,y_train)
+joblib.dump(model,"model.pkl")
+joblib.dump(scaler,"scaler.pkl")
+
 y_pred_test = model.predict(x_test_scaled)
 
 from sklearn.metrics import r2_score
@@ -49,5 +55,6 @@ plt.scatter(new_data,prediction,color="red",label="predicted point")
 plt.legend()
 plt.show()
 
-
+joblib.dump(model,"model.pkl")
+print("model saved successfully!")
  

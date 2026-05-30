@@ -19,3 +19,10 @@ This project predicts house prices using Regression
 
 ## OUTPUT
 Predicts house price based on area
+
+## RUN LOCALLY
+pip install -r requirement.txt
+
+python linearreg.py
+
+python -m streamlit run app.py
