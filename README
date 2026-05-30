@@ -22,7 +22,7 @@ Predicts house price based on area
 
 ## RUN LOCALLY
 '''bash
-pip install -r requirement.txt
+pip install -r requirements.txt
 
 python linearreg.py
 
