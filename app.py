@@ -12,6 +12,8 @@ df = pd.DataFrame(data_dict)
 model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")
 st.title("🏠 House Price Prediction")
+st.write("This app predicts house prices based on area using Linear Regression")
+st.write("Created by Shiva")
 st.subheader("House Price Dataset")
 st.dataframe(df)
 r2_Score_value = 0.99
